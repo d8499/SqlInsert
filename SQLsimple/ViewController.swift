@@ -10,11 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+  
+    @IBOutlet weak var txtName: UITextField!
+    
+    @IBOutlet weak var txtId: UITextField!
+    
+    
+    var dbobj:dbManager?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        dbobj = dbManager()
+      
+        /*     if (dbobj?.RunCommand(cmdText: "insert into user(name,id) values('abc','123')"))!
+        {
+            print("data inserted")
+        }
+        else
+        {
+            print("not inserted")
+ 
+         }
+  */
     }
 
+    @IBAction func btnSave(_ sender: UIButton)
+    {
+        if( dbobj?.RunCommand(cmdText: "insert into user(name,id) values ('\(txtName.text!)','\(txtId.text!)')") )!
+       {
+        print("Data inserted")
+        }
+        else
+        {
+          print("Data is Not inserted")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

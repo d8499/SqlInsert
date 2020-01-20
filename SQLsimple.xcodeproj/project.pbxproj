@@ -12,6 +12,11 @@
 		829F48FB23C719140096A4C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829F48F923C719140096A4C0 /* Main.storyboard */; };
 		829F48FD23C719140096A4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829F48FC23C719140096A4C0 /* Assets.xcassets */; };
 		829F490023C719140096A4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829F48FE23C719140096A4C0 /* LaunchScreen.storyboard */; };
+		829F490A23C719260096A4C0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 829F490823C719260096A4C0 /* libsqlite3.tbd */; };
+		829F490B23C719260096A4C0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 829F490923C719260096A4C0 /* libsqlite3.0.tbd */; };
+		829F490D23C71A230096A4C0 /* person.db in Resources */ = {isa = PBXBuildFile; fileRef = 829F490C23C71A230096A4C0 /* person.db */; };
+		829F491123C71EE90096A4C0 /* TEMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 829F491023C71EE90096A4C0 /* TEMP.m */; };
+		829F491323C71F480096A4C0 /* dbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F491223C71F480096A4C0 /* dbManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		829F48FC23C719140096A4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		829F48FF23C719140096A4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		829F490123C719140096A4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		829F490823C719260096A4C0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		829F490923C719260096A4C0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		829F490C23C71A230096A4C0 /* person.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = person.db; path = ../../../person.db; sourceTree = "<group>"; };
+		829F490F23C71EE90096A4C0 /* SQLsimple-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLsimple-Bridging-Header.h"; sourceTree = "<group>"; };
+		829F491023C71EE90096A4C0 /* TEMP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEMP.m; sourceTree = "<group>"; };
+		829F491223C71F480096A4C0 /* dbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829F490A23C719260096A4C0 /* libsqlite3.tbd in Frameworks */,
+				829F490B23C719260096A4C0 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 			children = (
 				829F48F423C719140096A4C0 /* SQLsimple */,
 				829F48F323C719140096A4C0 /* Products */,
+				829F490723C719260096A4C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +68,35 @@
 		829F48F423C719140096A4C0 /* SQLsimple */ = {
 			isa = PBXGroup;
 			children = (
+				829F490C23C71A230096A4C0 /* person.db */,
 				829F48F523C719140096A4C0 /* AppDelegate.swift */,
 				829F48F723C719140096A4C0 /* ViewController.swift */,
 				829F48F923C719140096A4C0 /* Main.storyboard */,
 				829F48FC23C719140096A4C0 /* Assets.xcassets */,
 				829F48FE23C719140096A4C0 /* LaunchScreen.storyboard */,
 				829F490123C719140096A4C0 /* Info.plist */,
+				829F490E23C71ECB0096A4C0 /* DB */,
 			);
 			path = SQLsimple;
+			sourceTree = "<group>";
+		};
+		829F490723C719260096A4C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				829F490923C719260096A4C0 /* libsqlite3.0.tbd */,
+				829F490823C719260096A4C0 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		829F490E23C71ECB0096A4C0 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				829F491023C71EE90096A4C0 /* TEMP.m */,
+				829F490F23C71EE90096A4C0 /* SQLsimple-Bridging-Header.h */,
+				829F491223C71F480096A4C0 /* dbManager.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +131,7 @@
 				TargetAttributes = {
 					829F48F123C719140096A4C0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829F490D23C71A230096A4C0 /* person.db in Resources */,
 				829F490023C719140096A4C0 /* LaunchScreen.storyboard in Resources */,
 				829F48FD23C719140096A4C0 /* Assets.xcassets in Resources */,
 				829F48FB23C719140096A4C0 /* Main.storyboard in Resources */,
@@ -136,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829F491123C71EE90096A4C0 /* TEMP.m in Sources */,
 				829F48F823C719140096A4C0 /* ViewController.swift in Sources */,
 				829F48F623C719140096A4C0 /* AppDelegate.swift in Sources */,
+				829F491323C71F480096A4C0 /* dbManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +313,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SQLsimple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bg.SQLsimple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLsimple/DB/SQLsimple-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +330,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SQLsimple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bg.SQLsimple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLsimple/DB/SQLsimple-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
